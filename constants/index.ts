@@ -6,7 +6,7 @@ export type ImageSliderType = {
   description: string;
 };
 
-export const sliderImages = [
+export const sliderImages: ImageSliderType[] = [
   {
     title: "Birdy",
     image: require("../assets/images/slide1.jpg"),

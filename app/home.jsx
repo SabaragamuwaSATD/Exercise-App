@@ -5,7 +5,8 @@ import {
   heightPercentageToDP as hp,
 } from "react-native-responsive-screen";
 import Ionicons from "react-native-vector-icons/Ionicons";
-import ImageSlider from "../components/imageSlider.jsx";
+import ImageSlider from "../components/imageSlider";
+import { sliderImages } from "../constants/index";
 
 export default function Home() {
   return (
@@ -43,7 +44,7 @@ export default function Home() {
       </View>
 
       <View>
-        <ImageSlider />
+        <ImageSlider itemList={sliderImages} />
       </View>
     </SafeAreaView>
   );
