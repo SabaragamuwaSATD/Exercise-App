@@ -7,6 +7,7 @@ import {
 import Ionicons from "react-native-vector-icons/Ionicons";
 import ImageSlider from "../components/imageSlider";
 import { sliderImages } from "../constants/index";
+import BodyParts from "../components/BodyParts";
 
 export default function Home() {
   return (
@@ -45,6 +46,10 @@ export default function Home() {
 
       <View>
         <ImageSlider itemList={sliderImages} />
+      </View>
+
+      <View className="flex-1">
+        <BodyParts />
       </View>
     </SafeAreaView>
   );

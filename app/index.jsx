@@ -19,12 +19,12 @@ export default function Index() {
   const router = useRouter();
 
   return (
-    <View className="flex-1 flex justify-end">
+    <View className="flex justify-end flex-1">
       <StatusBar style="light" />
 
       <Image
-        className="h-full w-full absolute"
-        source={require("../assets/images/welcome-back.jpg")}
+        className="absolute w-full h-full"
+        source={require("../assets/images/part3.jpg")}
       ></Image>
 
       <LinearGradient
@@ -40,13 +40,13 @@ export default function Index() {
         >
           <Text
             style={{ fontSize: hp(5) }}
-            className="text-white font-bold tracking-wide"
+            className="font-bold tracking-wide text-white"
           >
             Best <Text className="text-rose-500">Workouts</Text>
           </Text>
           <Text
             style={{ fontSize: hp(5) }}
-            className="text-white font-bold tracking-wide"
+            className="font-bold tracking-wide text-white"
           >
             For you
           </Text>
@@ -59,11 +59,11 @@ export default function Index() {
           <TouchableOpacity
             onPress={() => router.push("home")}
             style={{ height: hp(7), width: wp(80) }}
-            className="bg-rose-500 flex items-center justify-center mx-auto rounded-lg"
+            className="flex items-center justify-center mx-auto rounded-lg bg-rose-500"
           >
             <Text
               style={{ fontSize: hp(3) }}
-              className="text-white font-bold tracking-wide"
+              className="font-bold tracking-wide text-white"
             >
               Get Stated
             </Text>
