@@ -9,6 +9,7 @@ import { Touchable } from "react-native";
 import { TouchableOpacity } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
 import { useRouter } from "expo-router";
+import Animated, { FadeInDown } from "react-native-reanimated";
 
 export default function BodyParts() {
   const router = useRouter();
@@ -17,7 +18,7 @@ export default function BodyParts() {
     <View className="mx-4">
       <Text
         style={{ fontSize: hp(3) }}
-        className="font-semibold text-neutral-700"
+        className="mb-10 font-semibold text-neutral-700"
       >
         Excersices
       </Text>
@@ -38,7 +39,12 @@ export default function BodyParts() {
 
 const BodyPartCard = ({ item, router, index }) => {
   return (
-    <View>
+    <Animated.View
+      entering={FadeInDown.duration(400)
+        .delay(index * 200)
+        .springify()
+        .damping(3)}
+    >
       <TouchableOpacity
         onPress={() => router.push({ pathname: "/exercises", params: item })}
         style={{
@@ -73,6 +79,6 @@ const BodyPartCard = ({ item, router, index }) => {
           {item.name}
         </Text>
       </TouchableOpacity>
-    </View>
+    </Animated.View>
   );
 };
